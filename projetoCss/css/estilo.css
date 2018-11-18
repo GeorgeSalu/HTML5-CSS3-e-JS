@@ -33,6 +33,17 @@ main {
     margin-top: 15px;
 }
 
+.content-header {
+    border-bottom: solid 2px #ccc;
+    padding: 10px;
+
+    background: #eee;
+}
+
+.content-header h2 {
+    margin: 0;
+}
+
 .ropade {
     height: 80px;
     color: white;
