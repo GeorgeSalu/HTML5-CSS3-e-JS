@@ -9,7 +9,7 @@ Já com relação ao CSS você verá em detalhes todas as propriedades necessár
 Dará os primeiros passos com Javascript e descobrirá o poder dessa linguagem, que atualmente é a mais utilizada entre os desenvolvedores web.
 
 ## O que você aprenderá
-Poderão montar qualquer tipo de site estático, seja ele o seu próprio portfólio, seu site pessoal ou a apresentação de sua empresa na internet
-Criar sites responsivos de verdade
-Cria layouts complexos com flexbox e CSS grid
-Criar efeitos super interessantes com CSS3
+ - Poderão montar qualquer tipo de site estático, seja ele o seu próprio portfólio, seu site pessoal ou a apresentação de sua empresa na internet
+ - Criar sites responsivos de verdade
+ - Cria layouts complexos com flexbox e CSS grid
+ - Criar efeitos super interessantes com CSS3
