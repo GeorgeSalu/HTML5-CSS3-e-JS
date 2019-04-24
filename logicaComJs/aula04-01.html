@@ -19,13 +19,34 @@
     <script>
 
         function mostrarTabuada() {
-            alert("mostrar tabuada");
+            var n = prompt("digite um numero");
+
+            limparTabuada();
+
+            n = parseFloat(n);
+
+            var i = 1;
+
+            while (i <= 1000) {
+                mensagem += n + ' x ' + i + ' = ' + (n * i) + '<br>';
+                i++;
+            }
+
+            output.innerHTML = mensagem;
+
+        }
+
+        function limparTabuada() {
+            mensagem = "";
+            output.innerHTML = mensagem;
         }
 
         mostrarTabuada();
         var output = document.querySelector('#output');
 
         console.log(output);
+
+        var mensagem = "";
 
         output.innerHTML = "texto inserido com javascript"
     </script>
