@@ -11,9 +11,18 @@
 <body>
     <h1>Logica de programação com javascript</h1>
 
+    <button onclick="mostrarTabuada()">Criar tabuada</button>
+    <button onclick="limparTabuada()">Limpar Tabuada</button>
+
     <div id="output"></div>
 
     <script>
+
+        function mostrarTabuada() {
+            alert("mostrar tabuada");
+        }
+
+        mostrarTabuada();
         var output = document.querySelector('#output');
 
         console.log(output);
