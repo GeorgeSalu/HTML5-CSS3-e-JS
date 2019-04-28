@@ -11,6 +11,12 @@
 <body>
     <h1>Logica de programação com javascript</h1>
 
+    <button onclick="mostrarAreaAlert(largura, altura)">mostrar area num alert</button>
+
+    <button onclick="mostrarAreaOutput(largura, altura)">mostrar area num output</button>
+
+    <div id="output"></div>
+
     <!--
         Pedir para o usuario digitar dois 
         numeros que representem os lados de um 
@@ -20,7 +26,56 @@
         o que acontece se o usuario digitar um dado invalido
     -->
 
+    <script>
 
+
+        function mostrarAreaAlert() {
+
+            var largura = prompt("digite a largura");
+            largura = parseFloat(largura);
+
+            var altura = prompt("digite a altura");
+            altura = parseFloat(altura);
+
+            var area = calcularArea(largura, altura);
+
+            alert('area total é ' + area)
+        }
+
+        function mostrarAreaOutput() {
+
+            var largura = prompt("digite a largura");
+            largura = parseFloat(largura);
+
+            var altura = prompt("digite a altura");
+            altura = parseFloat(altura);
+
+            try {
+
+                var area = calcularArea(largura, altura);
+            } catch (e) {
+                alert(e)
+            }
+
+            document.querySelector('#output').innerHTML = 'area total é ' + area;
+        }
+
+        mostrarAreaAlert();
+
+        function calcularArea(l, a) {
+
+            if (l === undefined || a === undefined) {
+                throw new Error('calcular area precisa receber dois numeros')
+            }
+
+            if (isNaN(l) || isNaN(a)) {
+                throw new Error('apenas numeros')
+            }
+
+            return l * a;
+        }
+
+    </script>
 </body>
 
 </html>
