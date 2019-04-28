@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logica de programação com javascript</title>
+</head>
+
+<body>
+    <h1>Logica de programação com javascript</h1>
+
+    <div id="output"></div>
+</body>
+
+<script>
+
+    var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha', 'caderno', 'livro');
+
+    var output = document.querySelector('#output');
+
+    var msg = '';
+
+    for (var i = 0; i < produtos.length; i++) {
+        msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>'
+    }
+
+    output.innerHTML = produtos;
+
+</script>
+
+</html>
