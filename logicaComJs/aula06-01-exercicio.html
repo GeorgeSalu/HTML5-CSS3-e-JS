@@ -17,6 +17,8 @@
 
     var dias = new Array('domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado');
 
+    var hoje = new Date();
+    var diaSemana = hoje.getDate();
     /*
         0 - domingo
         1 - segunda
@@ -25,7 +27,7 @@
         .
     */
 
-    alert('Bem vindo hoje é...');
+    alert('Bem vindo hoje é...' + dias[diaSemana]);
 
 </script>
 
