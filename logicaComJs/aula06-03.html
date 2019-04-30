@@ -16,6 +16,25 @@
         contendo quantidade em estoque e preco
         estes adados estarao agrupados em um array de objetos
     -->
+    <div id="output"></div>
 </body>
+
+<script>
+
+    var produtos = [
+        { "nome": "caneta", "preco": 2 },
+        { "nome": "lapis", "preco": 1.2 },
+        { "nome": "borracha", "preco": 2 }
+    ]
+
+    var msg = "";
+
+    for (var i = 0; i < produtos.length; i++) {
+        msg += "produto : " + produtos[i].nome
+        msg += "preco : " + produtos[i].preco
+    }
+
+    document.querySelector('#output').innerHTML = msg;
+</script>
 
 </html>
