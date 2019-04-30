@@ -20,4 +20,28 @@
     -->
 </body>
 
+<script>
+
+    var user1 = new Object();
+    user1.nome = 'maria';
+    user1.email = 'maria@gmail.com';
+
+    var user2 = new Object();
+    user2.nome = 'joao';
+    user2.email = 'joao@gmail.com';
+
+    var user3 = new Object();
+    user3.nome = 'jose';
+    user3.email = 'jose@gmail.com';
+
+    var users = new Array(user1, user2, user3);
+
+    var x = 0;
+    while (users[x]) {
+        console.log(users[0].nome);
+        x++;
+    }
+
+</script>
+
 </html>
