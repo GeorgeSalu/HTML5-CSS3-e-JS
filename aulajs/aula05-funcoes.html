@@ -25,6 +25,26 @@
             console.log('teste', str)
         }
 
+        var teste = function (t) {
+            f();
+        };
+
+        teste(function () {
+            console.log('funcao passada por parametro')
+        })
+
+        console.log('------------------------------');
+
+        var x = 0;
+
+        function mostrarX() {
+            var x = 10;
+            console.log("mostrar x : ", x)
+        }
+        mostrarX()
+
+        console.log("mostrar x: ", x)
+
     </script>
 </head>
 
