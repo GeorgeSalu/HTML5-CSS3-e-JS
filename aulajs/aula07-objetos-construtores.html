@@ -19,23 +19,29 @@
 
     <script>
 
-        function _caneta(preco, cor) {
+        var Caneta = (function (window) {
+            'use strict';
+            console.log(this)
+            function _caneta(preco, cor) {
 
-            //privado
-            var color = cor || 'black';
-            //publicas
-            this.preco = preco || 1;
-            this.mudarCor = function (cor) {
-                if (cor !== 'red' && cor !== 'blue' && cor !== 'black') {
-                    return;
+                //privado
+                var color = cor || 'black';
+                //publicas
+                this.preco = preco || 1;
+                this.mudarCor = function (cor) {
+                    if (cor !== 'red' && cor !== 'blue' && cor !== 'black') {
+                        return;
+                    }
+                    color = cor;
                 }
-                color = cor;
+
+                this.pegaCor = function () {
+                    return color;
+                }
             }
 
-            this.pegaCor = function () {
-                return color;
-            }
-        }
+            return _caneta;
+        })(window)
 
     </script>
 
