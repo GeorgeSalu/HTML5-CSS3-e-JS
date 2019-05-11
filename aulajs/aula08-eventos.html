@@ -58,6 +58,7 @@
 
         $d1.addEventListener('click', function (e) {
             console.log('click no $d1');
+            console.log('objeto event')
             e.stopPropagation();
         }, false);
 
@@ -67,6 +68,7 @@
 
         document.addEventListener('click', function (e) {
 
+            console.log('objeto event')
             console.log('clicou no document');
             console.log(e.currentTarget);
             console.log(this);
