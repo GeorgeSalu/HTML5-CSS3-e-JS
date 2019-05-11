@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Curso Javascript Completo 2018</h1>
 
-        <textarea id="msg"></textarea>
+        <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
 
         <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div>
 
@@ -24,12 +24,27 @@
 
 
             var $txtMsg = document.getElementById('msg');
+            var $restaContainer = document.getElementById('restaContainer');
+            var $resta = document.getElementById('resta');
+            var maxima = $txtMsg.maxLength;
 
-            $txtMsg.addEventListener('input', input);
+            function mostrarContainerResta() {
+                $restaContainer.style.display = 'block';
+            }
+
+            mostrarContainerResta();
+            mostrarCaracteresRestantes(maxima);
+            $txtMsg.addEventListener('input', checkLength);
 
 
-            function input(e) {
-                console.log('input', this.value)
+            function checkLength(e) {
+                var numeroLetrasDigitadas = this.value.length;
+                var caracteresRestantes = parseInt(maxima) - parseInt(numeroLetrasDigitadas);
+                mostrarCaracteresRestantes(caracteresRestantes);
+            }
+
+            function mostrarCaracteresRestantes(n) {
+                $resta.textContent = n;
             }
 
         })()
