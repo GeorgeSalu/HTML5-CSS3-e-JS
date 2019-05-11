@@ -13,6 +13,8 @@
 
         <textarea id="msg"></textarea>
 
+        <div id="restaContainer" style="display: none;">Restam <span id="resta"></span> caracteres</div>
+
     </div>
 
     <script>
@@ -23,22 +25,8 @@
 
             var $txtMsg = document.getElementById('msg');
 
-            $txtMsg.addEventListener('keypress', keypress);
-            $txtMsg.addEventListener('keyup', keyup);
-            $txtMsg.addEventListener('keydown', keydown);
             $txtMsg.addEventListener('input', input);
 
-            function keypress(e) {
-                console.log('keypress', this.value)
-            }
-
-            function keyup(e) {
-                console.log('keyup', this.value)
-            }
-
-            function keydown(e) {
-                console.log('kyedown', this.value)
-            }
 
             function input(e) {
                 console.log('input', this.value)
