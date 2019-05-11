@@ -13,6 +13,7 @@
 
         <button id="btn1" onclick="clicar()">botao 1</button>
         <button id="btn2">botao 2</button>
+        <button id="btn3" onclick="alert('mundo 2');">botao 3</button>
     </div>
 
 
@@ -26,6 +27,23 @@
         function clicar() {
             alert('clicou');
 
+            return function () {
+                alert('clicou 2');
+            }
+        }
+
+        btn3.addEventListener("click", function () {
+            alert('clicou com dom level 2');
+        });
+        btn3.addEventListener("click", function () {
+            alert('clicou com dom level 2 com outro evento');
+        });
+
+        btn3.onclick = function () {
+            alert('ola');
+        }
+        btn3.onclick = function () {
+            alert('mundo 3');
         }
 
 
