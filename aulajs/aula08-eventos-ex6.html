@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Logica de programação com javascript</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+            color: #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,12 +55,14 @@
                 }
             });
 
-            for (var i = 0; i < $lis.length; i++) {
-                addEvent($lis[i]);
-            }
+            $ul.addEventListener('click', function (e) {
+                if (e.target.nodeName === 'LI') {
+                    toogleDone(e.target);
+                }
+            })
 
-            function toogleDone() {
-                this.classList.toggle('done');
+            function toogleDone(li) {
+                li.classList.toggle('done');
             }
 
             function addTask() {
@@ -68,14 +76,7 @@
 
                 $txtTask.value = '';
                 $txtTask.focus();
-
-                addEvent(li);
             }
-
-            function addEvent(li) {
-                li.addEventListener('click', toogleDone);
-            }
-
 
         })()
 
