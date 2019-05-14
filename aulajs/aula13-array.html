@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="George">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, tecnologia">
+</head>
+
+<body>
+    <h1>logica de programação com javascript</h1>
+
+    <script>
+
+        var arr = ['1', 20, 3, 4, 5, 'kjkl', 20, "30"];
+
+        var sohNumeros = arr.every(function (el) {
+            return typeof el === 'number';
+        });
+        console.log(sohNumeros);
+
+        var aoMenosUmNumero = arr.some(function (el) {
+            return typeof el === 'number';
+        });
+        console.log(aoMenosUmNumero);
+
+        var numeros = arr.filter(function (el, i, arr) {
+            return typeof el === 'number';
+        });
+        console.log(numeros)
+
+        arr.forEach(function (el, i, arr) {
+            console.log('el=', el, '  |  i=', i, '  |  i - ', arr.toString());
+        })
+
+
+        var posicaoStr1 = arr.indexOf(20, 5);
+        console.log('posicaoStr1', posicaoStr1);
+
+        var posicaoStr2 = arr.lastIndexOf(20, 5);
+        console.log('posicaoStr2', posicaoStr2);
+
+
+    </script>
+</body>
+
+</html>
