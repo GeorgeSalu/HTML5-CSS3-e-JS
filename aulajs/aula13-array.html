@@ -42,6 +42,17 @@
         var posicaoStr2 = arr.lastIndexOf(20, 5);
         console.log('posicaoStr2', posicaoStr2);
 
+        console.log(numeros);
+        numeros = numeros.map(function (el, i, arr) {
+            return el * i;
+        });
+        console.log(numeros);
+
+        var arr2 = arr.concat(numeros, 'ola', 'arr2', 100);
+        console.log(arr2);
+
+        var str = arr2.join(' -- ');
+        console.log(str);
 
     </script>
 </body>
