@@ -43,7 +43,22 @@
                 }, 100)
             }
 
+            function formataMs(ms) {
+                const MINUTO = 60 * 1000;
+                if (ms < 1000) {
+                    return ms;
+                } else if (ms < MINUTO) {
+                    var s = ms / 1000;
+                    s = parseInt(s);
+                    var c = ms - (s * 1000);
+                    return s + ':' + c;
+                } else {
+                    var m = ms / MINUTO;
+                    m = parseInt(m);
+                    return m + ":" + formataMs(ms - m * MINUTO);
+                }
 
+            }
 
         })()
 
