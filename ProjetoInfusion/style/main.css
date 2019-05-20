@@ -31,3 +31,18 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.header__nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #586165;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    padding: 25px 0;
+    transition: .8s ease;
+}
+
+.header__nav a:hover {
+    color: #63c6ae;   
+}
