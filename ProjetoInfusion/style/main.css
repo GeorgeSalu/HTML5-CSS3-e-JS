@@ -46,3 +46,25 @@ body{
 .header__nav a:hover {
     color: #63c6ae;   
 }
+
+.hero{
+    height: 80vh;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    background-size: 40px 40px, 40px 40px, cover;
+}
+
+.hero__title{
+    background-color: #63c6ae;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 30px 20px;
+    text-transform: uppercase;
+}
