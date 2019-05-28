@@ -19,6 +19,43 @@
     <div id="output"></div>
 
     <script>
+        var n1 = prompt("digite um numero");
+        n1 = parseFloat(n1);
+
+        escrever();
+
+        function escrever() {
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+
+        function somar() {
+            var n = prompt("digite outo valor");
+            n = parseFloat(n);
+            n1 = n1 + n;
+            escrever();
+        }
+
+        function subtrair() {
+            var n = prompt("digite outo valor");
+            n = parseFloat(n);
+            n1 = n1 - n;
+            escrever();
+        }
+
+        function multiplicar() {
+            var n = prompt("digite outo valor");
+            n = parseFloat(n);
+            n1 = n1 * n;
+            escrever();
+        }
+
+        function dividir() {
+            var n = prompt("digite outo valor");
+            n = parseFloat(n);
+            n1 = n1 / n;
+            escrever();
+        }
 
     </script>
 </body>
